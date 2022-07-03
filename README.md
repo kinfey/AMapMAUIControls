@@ -61,7 +61,7 @@ Don't forget to set the ID and application signature corresponding to the SDK in
 ## **run**
 <br/>
 
-Please use the real machine to run, now it is just a simple binding, thank you for your support.
+Please use device (not emulator) to run, now it is just a simple binding, thank you for your support.
 
 <img src="./img/iOS.jpg" style="width: 250px"/> <img src="./img/Android.jpg" style="width: 250px"/>
 
