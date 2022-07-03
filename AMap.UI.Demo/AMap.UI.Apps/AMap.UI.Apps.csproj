@@ -1,0 +1,244 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0-android;net6.0-ios</TargetFrameworks>
+		<!-- <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks> -->
+		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+		<OutputType>Exe</OutputType>
+		<RootNamespace>AMap.UI.Apps</RootNamespace>
+		<UseMaui>true</UseMaui>
+		<SingleProject>true</SingleProject>
+		<ImplicitUsings>enable</ImplicitUsings>
+
+		<!-- Display name -->
+		<ApplicationTitle>AMap.UI.Apps</ApplicationTitle>
+
+		<!-- App Identifier -->
+		<ApplicationId>com.kinfeyapp.AMapDemo</ApplicationId>
+		<ApplicationIdGuid>5a5b0818-81b1-472b-ad2c-174c34beb79b</ApplicationIdGuid>
+
+		<!-- Versions -->
+		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+		<ApplicationVersion>1</ApplicationVersion>
+
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">31.0</SupportedOSPlatformVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+	</PropertyGroup>
+   <PropertyGroup Condition="$(TargetFramework.Contains('-ios'))">
+        <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+        <UseMSBuildEngine>true</UseMSBuildEngine>
+        <WarningLevel>4</WarningLevel>
+        <MtouchLink>SdkOnly</MtouchLink>
+        <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+        <DeviceSpecificBuild>true</DeviceSpecificBuild>
+        <MtouchDebug>true</MtouchDebug>
+        <MtouchFastDev>true</MtouchFastDev>
+        <MtouchProfiling>true</MtouchProfiling>
+        <MtouchUseSGen>true</MtouchUseSGen>
+        <MtouchUseRefCounting>true</MtouchUseRefCounting>
+        <MtouchFloat32>true</MtouchFloat32>
+    </PropertyGroup> 
+
+
+  <ItemGroup Condition="'$(TargetPlatformIdentifier)' == 'ios'">
+    <Compile Include="AMap\*.ios.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+    <Compile Include="AMap\*.ios.*.cs" Exclude="$(DefaultItemExcludes);$(DefaultExcludesInProjectFolder)" />
+  </ItemGroup>
+
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
+
+		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+
+	
+  <ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'ios' ">
+    <ProjectReference Include="..\iOS.AmapSDK.Foundation\iOS.AmapSDK.Foundation.csproj" /> 
+    <ProjectReference Include="..\iOS.AmapSDK.3D\iOS.AmapSDK.3D.csproj" /> 
+  </ItemGroup>
+  
+  <ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'android' ">
+    <ProjectReference Include="..\Droid.AmapSDK\Droid.AmapSDK.csproj" /> 
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Platforms\iOS\Resources\" />
+    <Folder Include="AMap\" />
+  </ItemGroup>
+
+    
+  <ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'ios' ">
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\GNaviConfig.xml" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\res.zip" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\terrainStyle.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\res.ck" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\skybox-1\bottom.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\skybox-1\left.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\skybox-1\top.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\skybox-1\back.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\skybox-1\right.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\skybox-1\front.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\purplePin%403x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\arrow_line_outer.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\greenPin%403x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\offline_shouqi_2%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\particle_fog.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\lineTexture.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\greenPin_lift%403x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\greenPin_lift%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\offline_shouqi%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\offline_zhankai%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\particle_rain.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\calloutArrowMask.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\traffic_texture_red.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\calloutArrowMask%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\greenPin%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\particle_sun_1.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\particle_sun_0.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\purplePin%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\offline_sousuo%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\select_.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\pin_shadow.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\offline_clear%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\arrow_line_inner.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\greenPin.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\offline_down%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\arrow_line_3d_shadow.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\purplePin_lift.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\redPin_lift%403x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\redPin_lift.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\particle_haze.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\terrainDefault.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\lineDashTexture.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\traffic_texture_blue.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\traffic_texture_green.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\traffic_texture_yellow.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\marker_blue%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\arrow_line_3d_outer.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\purplePin.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\redPin_lift%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\particle_snow.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\traffic_texture_darkred.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\select_%403x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\lineDashTextureDot.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\pin_shadow%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\redPin%403x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\purplePin_lift%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\purplePin_lift%403x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\lineTextureThin.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\redPin%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\offline_zhankai_2%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\pin_shadow%403x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\traffic_texture_gray.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\arrow_line_3d_inner.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\redPin.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\select_%402x.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\marker_blue.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\images\greenPin_lift.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\offline\offlinePackage.plist" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_1_18_1627443174.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\3d_navi_sky_day.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_26_18_1624864866.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\dash.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_35_18_1641374969.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\anscii_0.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_3_18_1624864847.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_6_18_1624866734.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_40_18_1629979483.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\bktile_n.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\tmc3d_allinone.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\bktile.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\mapprofile_1_18_1626748603.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_1_18_1620803672.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_4_18_1630315891.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_2_18_1620803665.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\3dportrait.xml" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\3dlandscape.xml" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\tmc3d_n_allinone.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\dash_cd.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_50_18_1639057433.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_38_18_1630469232.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_9_18_1609147790.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_0_18_1641525834.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\search_scenic_icon.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\tmc_blind_allinone.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\3d_sky_day.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_3_18_1620803657.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_25_18_1624864857.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_10_18_1620803632.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_28_18_1621223375.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\arrow_topface.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_18_18_1624864928.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\waterline.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\tmc_n_allinone.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_25_18_1616413163.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_17_18_1605511247.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\tmc_allinone.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_29_18_1637641334.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_16_18_1605511194.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_8_18_1624864902.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\styleiconslist.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\3d_sky_night.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\lineround.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_5_18_1616413149.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\laneprofile_1_18_1640573575.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\config_2_18_1605512060.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_39_18_1630469193.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\tmc3d_blind_allinone.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_4_18_1624863920.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\config_1_18_1623401831.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_50_18_1621241047.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_41_18_1623986571.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\anscii.fnt" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_19_18_1605511205.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_11_18_1611742683.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_24_18_1619768490.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\tmc_l_allinone.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_40_18_1624871103.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\dash_tq.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\mapprofile_2_18_1620443466.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_100_18_1640182887.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_37_18_1612505452.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_5_18_1630315937.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_1_17_for_terrain.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\tmc3d_l_allinone.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\style_36_18_1641374988.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\icons_6_18_1624863929.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\grass_night.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_sky_night.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\icons_42_18_1615218949.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\d_yellow_night.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\crossing_nigth_bk.data" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_bk_grass_day.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\road_bottom_day.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1016_1.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1016_2.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\d_yellow_day.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\exit_label_bk_secondary_day.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\grass_day.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1015_1.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_bk_grass_night.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\roadbk_main_day.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1015_2.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\exit_label_bk_main_day.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_sky_day.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\road_bottom_night.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\roadbk_main_night.png" />
+    <BundleResource Include="Platforms\iOS\Resources\AMap.bundle\AMap3D.bundle\VM3DRes\crossing_day_bk.data" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{609BDA59-07E8-4A75-8A29-427A0B8C2900}|Default" DisableUseMSBuildOnMonoInfoBar="True" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="AMap.UI.Apps/Platforms/Android/AMap.Android.cs">
+    <Files>
+      <File FileName="AMap.UI.Apps/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="AMap.UI.Apps/Platforms/Android/AMap.android.cs" Line="24" Column="71" />
+      <File FileName="AMap.UI.Apps/Platforms/iOS/AMap.iOS.cs" Line="22" Column="40" />
+      <File FileName="AMap.UI.Apps/AMap/AMap.shared.cs" Line="1" Column="1" />
+      <File FileName="AMap.UI.Apps/Platforms/Android/MainActivity.cs" Line="14" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AMap.UI.Demo" expanded="True">
+            <Node name="AMap.UI.Apps" expanded="True">
+              <Node name="AMap" expanded="True" />
+              <Node name="Platforms" expanded="True">
+                <Node name="Android" expanded="True">
+                  <Node name="AMap.Android.cs" selected="True" />
+                </Node>
+                <Node name="iOS" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+              <Node name="AppShell.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.AMap.UI.Apps PreferredExecutionTarget="Android.Pixel_4_API_31" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.1EFF76F2-C33A-4372-8699-CC733688030B" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <DisabledProjects>
+    <String>AMap.UI.Library/AMap.UI.Library.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
