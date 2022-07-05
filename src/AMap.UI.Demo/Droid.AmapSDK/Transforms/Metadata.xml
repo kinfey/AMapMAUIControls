@@ -1,5 +1,5 @@
 ﻿<metadata>
-<attr path="/api/package[@name='com.amap.api.maps.model']/class[@name='TileProjectionCreator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object[]</attr>
+    <attr path="/api/package[@name='com.amap.api.maps.model']/class[@name='TileProjectionCreator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object[]</attr>
     <attr path="/api/package[@name='com.amap.api.maps.model']/class[@name='TileProjectionCreator']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]" name="managedReturn">Java.Lang.Object</attr>
     <attr path="/api/package[@name='com.amap.api.maps.model']/class[@name='PolylineOptionsCreator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object[]</attr>
     <attr path="/api/package[@name='com.amap.api.maps.model']/class[@name='PoiCreator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object[]</attr>
@@ -38,7 +38,6 @@
     <attr path="/api/package[@name='com.amap.api.maps.model']/class[@name='BitmapDescriptorCreator']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object[]</attr>
     <attr path="/api/package[@name='com.amap.api.maps.model']/class[@name='ArcOptionsCreator']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]" name="managedReturn">Java.Lang.Object</attr>
     
-    <!-- path="/api/package[@name='com.amap.api.maps']/class[@name='AMap']" path="/api/package[@name='com.amap.api.services.busline']/class[@name='BusLineSearch']/method[@name='setOnBusLineSearchListener' and count(parameter)=1 and parameter[1][@type='com.amap.api.services.busline.BusLineSearch.OnBusLineSearchListener']]" -->
     <remove-node path="/api/package[@name='com.autonavi.base.ae.gmap.gloverlay']/class[@name='CrossVectorOverlay']/method[@name='setVisible' and count(parameter)=1 and parameter[1][@type='boolean']]" />
 
     <attr path="/api/package[@name='com.amap.api.services.busline']/class[@name='BusLineSearch']" name="managedName">AmapBusLineSearch</attr>
@@ -72,35 +71,7 @@
     <remove-node path="/api/package[@name='com.amap.api.maps.model']/class[@name='PolylineOptions']/method[@name='getUpdateFlags' and count(parameter)=0]" />
     <remove-node path="/api/package[@name='com.amap.api.maps.model']/class[@name='BasePointOverlay']/method[@name='isInfoWindowEnable' and count(parameter)=0]" />
     <remove-node path="/api/package[@name='com.autonavi.amap.mapcore.interfaces']/interface[@name='ICrossVectorOverlay']/method[@name='setVisible' and count(parameter)=1 and parameter[1][@type='boolean']]" />
-    <!-- path="/api/package[@name='com.amap.api.maps']/interface[@name='AMap.OnCameraChangeListener']" /Users/lokinfey/Desktop/droidbinding/Droid.AMap.Foundation/obj/Debug/net6.0-android/generated/src/Com.Amap.Api.Maps.AMap.cs(83,83): Error CS0102: The type 'AMap' already contains a definition for 'CameraChange' (CS0102) (Droid.AMap.Foundation) -->
-    <!-- <attr path="/api/package[@name='com.amap.api.maps']/interface[@name='AMap.OnCameraChangeListener']/method[@name='onCameraChange' and count(parameter)=1 and parameter[1][@type='com.amap.api.maps.model.CameraPosition']]" name="managedName">AMapCameraChangeEventArgs</attr> -->
-    <!-- <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" /> -->
-<!-- path="/api/package[@name='com.amap.api.services.busline']/class[@name='BusStationSearch']/method[@name='setOnBusStationSearchListener' and count(parameter)=1 and parameter[1][@type='com.amap.api.services.busline.BusStationSearch.OnBusStationSearchListener']]" -->
-    <!-- <attr path="/api/package[@name='com.amap.api.maps']/class[@name='Amap']/field[@name='CameraChange']" name="managedName">CameraChange_Binding</attr> -->
 
-    <!-- <remove-node path="/api/package[@name='com.amap.api.maps']/class[@name='Amap']/field[@name='CameraChange']" /> -->
-          <!-- path="/api/package[@name='com.amap.api.maps']/interface[@name='AMap.OnCameraChangeListener']/method[@name='AMapCameraChangeEventArgs' and count(parameter)=1 and parameter[1][@type='com.amap.api.maps.model.CameraPosition']]" -->
-<!--     
-          path="/api/package[@name='com.amap.api.maps']/interface[@name='AMap.OnCameraChangeListener']/method[@name='onCameraChange' and count(parameter)=1 and parameter[1][@type='com.amap.api.maps.model.CameraPosition']]" -->
-    <!-- <attr path="/api/package[@name='com.amap.api.maps']/interface[@name='AMap.OnCameraChangeListener']/method[@name='OnCameraChange' and count(parameter)=1 and parameter[1][@type='com.amap.api.maps.model.CameraPosition']]" name="managedName">CameraChangebb</attr>  -->
-    <!-- <attr path="/api/package[@name='com.amap.api.maps']/interface[@name='AMap.OnCameraChangeListener']/field[@name='CameraChange']" name="name">AMapEventArgs</attr>   -->
+    <attr path="/api/package[@name='com.amap.api.maps']/interface[@name='AMap.OnMapScreenShotListener']/method[@name='onMapScreenShot' and count(parameter)=1 and parameter[1][@type='android.graphics.Bitmap']]" name="managedName">OnMapScreenShotA</attr>
 
-    <!-- <attr path="/api/package[@name='com.amap.api.maps']/class[@name='Amap']/field[@name='CameraChange']" name="name">CameraChange1</attr> -->
-
-    <!-- <attr path="/api/package[@name='com.autonavi.base.amap.mapcore']/class[@name='AMapNativeGlOverlayLayer']/method[@name='createNative' and count(parameter)=0]" name="visibility">public</attr>
-
-    <attr path="/api/package[@name='com.autonavi.base.amap.mapcore']/class[@name='AMapNativeGlOverlayLayer']/method[@name='createNative' and count(parameter)=0]" name="visibility">public</attr>
-    <attr path="/api/package[@name='com.amap.api.maps.model']/class[@name='PolylineOptions']/method[@name='getUpdateFlags' and count(parameter)=0]" name="visibility">public</attr>
-    <attr path="/api/package[@name='com.amap.api.maps.model']/class[@name='CircleOptions']/method[@name='getUpdateFlags' and count(parameter)=0]" name="visibility">public</attr> -->
- 
-  <!--事件名相同-->
-     <attr path="/api/package[@name='com.amap.api.maps']/interface[@name='AMap.OnMapScreenShotListener']/method[@name='onMapScreenShot' and count(parameter)=1 and parameter[1][@type='android.graphics.Bitmap']]" name="managedName">OnMapScreenShotA</attr>
-  <!-- <attr path="/api/package[@name='com.amap.api.maps']/class[@name='AMap]" name="managedName">CameraChange1</attr>  -->
-  <!-- <attr path="/api/package[@name='com.amap.api.maps']
-        /interface[@name='AMap.OnMapScreenShotListener']
-        /method[@name='onMapScreenShot' 
-        and count(parameter)=2 
-        and parameter[1][@type='android.graphics.Bitmap'] 
-        and parameter[2][@type='int']]"
-        name="managedName">OnMapScreenShotB</attr> -->
 </metadata>
