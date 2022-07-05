@@ -75,7 +75,7 @@ https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/en/00.Intro.md
 
 https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/en/01.iOSBinding.md
 
-**3. Build MAUI control for AutoNavi map  - Android Native Binding***
+**3. Build MAUI control for AutoNavi map  - Android Native Binding**
 
 https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/en/02.DroidBinding.md
 
@@ -160,7 +160,7 @@ https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/00.Intro.md
 
 https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/01.iOSBinding.md
 
-**3. 做一个高德地图的 iOS / Android MAUI 控件(Android 原生库绑定)***
+**3. 做一个高德地图的 iOS / Android MAUI 控件(Android 原生库绑定)**
 
 https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/02.DroidBinding.md
 
