@@ -1,4 +1,4 @@
-# **AutoNavi Map SDK For .NET MAUI (Android / iOS) Native Control Example**
+# **Build MAUI control for AutoNavi Map**
 
 .NET MAUI is a cross-platform application solution. If you have good knowledge of C# and .NET, you can use MAUI to complete the development of iOS , Android , Windows , Linux , macOS. This example is completed by .NET binding the native library. Taking the SDK provided by AutoNavi as an example, I hope to give developers and manufacturers some inspiration when developing .NET MAUI applications and controls.
 <br/>
