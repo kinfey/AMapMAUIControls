@@ -1,4 +1,4 @@
-## **Tutorial**
+## **English Tutorial**
 
 **1. Build MAUI control for AutoNavi map  - Preface**
 
@@ -16,7 +16,7 @@ https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/en/02.DroidBinding
 
 https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/en/03.UIControls.md
 
-## **教程**
+## **中文教程**
 
 **1. 做一个高德地图的 iOS / Android MAUI 控件(前言)**
 
