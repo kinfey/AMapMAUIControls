@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{C94AA6E0-7FAB-4CBF-8B8C-6B1A54781EDF}|Default">
+  <MonoDevelop.Ide.ItemProperties.AMap.Droid PreferredExecutionTarget="Android.Pixel_4_API_31" />
+  <MultiItemStartupConfigurations />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.Pixel_4_API_31" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Droid.AMap PreferredExecutionTarget="Android.Pixel_4_API_31" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AMap.Droid.Demo" expanded="True" selected="True">
+            <Node name="AMap.Droid" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
