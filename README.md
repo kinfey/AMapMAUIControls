@@ -65,6 +65,24 @@ Please use device (not emulator) to run, now it is just a simple binding, thank 
 
 <img src="./img/iOS.jpg" style="width: 250px"/> <img src="./img/Android.jpg" style="width: 250px"/>
 
+## **Tutorial**
+
+**1. Build MAUI control for AutoNavi map  - Preface**
+
+https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/00.Intro.md
+
+**2. Build MAUI control for AutoNavi map  - iOS Native Binding**
+
+https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/01.iOSBinding.md
+
+**3. Build MAUI control for AutoNavi map  - Android Native Binding***
+
+https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/02.DroidBinding.md
+
+**4. Build MAUI control for AutoNavi map  - Custom Controls**
+
+https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/03.UIControls.md
+
 # **高德地图 SDK For .NET MAUI ( Android / iOS ) 原生控件示例**
 
 .NET MAUI 是跨平台应用的解决方案，如果你具备 C# 和 .NET 的前端知识，就可以通过 MAUI 来完成 iOS , Android , Windows , Linux , macOS 的开发。 本示例是通过 .NET 绑定原生库来完成，以高德地图提供的 SDK 为例， 希望给到开发者和厂商在开发 .NET MAUI 应用和控件时的一些启发。
@@ -131,4 +149,23 @@ https://lbs.amap.com/api/android-sdk/download/
 请使用真机运行，现在只是简单绑定，谢谢支持。
 
 <img src="./img/iOS.jpg" style="width: 250px"/> <img src="./img/Android.jpg" style="width: 250px"/>
+
+## **教程**
+
+**1. 做一个高德地图的 iOS / Android MAUI 控件(前言)**
+
+https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/00.Intro.md
+
+**2. 做一个高德地图的 iOS / Android MAUI 控件(iOS 原生库绑定)**
+
+https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/01.iOSBinding.md
+
+**3. 做一个高德地图的 iOS / Android MAUI 控件(Android 原生库绑定)***
+
+https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/02.DroidBinding.md
+
+**4. 做一个高德地图的 iOS / Android MAUI 控件(创建控件)**
+
+https://github.com/kinfey/AMapMAUIControls/blob/main/tutorial/cn/03.UIControls.md
+
 
