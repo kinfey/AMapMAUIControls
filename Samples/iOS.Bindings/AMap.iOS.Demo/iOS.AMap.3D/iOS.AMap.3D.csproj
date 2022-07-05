@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-ios</TargetFramework>
+    <RootNamespace>iOS.AMap._3D</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <IsBindingProject>true</IsBindingProject>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<NoBindingEmbedding>false</NoBindingEmbedding>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinitions.cs" />
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+
+
+
+
+  <ItemGroup>
+    <NativeReference Include="MAMapKit.framework">
+      <Kind>Framework</Kind>
+      <ForceLoad>True</ForceLoad>
+      <SmartLink>False</SmartLink>
+      <Frameworks>GLKit OpenGLES UIKit Foundation CoreGraphics QuartzCore CoreLocation CoreTelephony SystemConfiguration Security AdSupport JavaScriptCore</Frameworks>
+      <LinkerFlags>-lz -lstdc++ -lc++</LinkerFlags>
+    </NativeReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\iOS.AMap.Foundation\iOS.AMap.Foundation.csproj" />
+  </ItemGroup>
+</Project>

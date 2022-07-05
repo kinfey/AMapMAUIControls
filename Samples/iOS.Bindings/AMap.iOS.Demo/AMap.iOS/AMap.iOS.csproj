@@ -1,0 +1,654 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-ios</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <UseMSBuildEngine>true</UseMSBuildEngine>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <SupportedOSPlatformVersion>13.0</SupportedOSPlatformVersion>
+    <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\iOS.AMap.3D\iOS.AMap.3D.csproj" />
+    <ProjectReference Include="..\iOS.AMap.Foundation\iOS.Amap.Foundation.csproj" />
+    <ProjectReference Include="..\iOS.AMap.Foundation\iOS.AMap.Foundation.csproj" />
+  </ItemGroup>
+
+  
+  <ItemGroup>
+    <BundleResource Include="Resources\AMap.bundle\GNaviConfig.xml" />
+    <BundleResource Include="Resources\AMap.bundle\res.zip" />
+    <BundleResource Include="Resources\AMap.bundle\terrainStyle.data" />
+    <BundleResource Include="Resources\AMap.bundle\res.ck" />
+    <BundleResource Include="Resources\AMap.bundle\skybox-1\bottom.png" />
+    <BundleResource Include="Resources\AMap.bundle\skybox-1\left.png" />
+    <BundleResource Include="Resources\AMap.bundle\skybox-1\top.png" />
+    <BundleResource Include="Resources\AMap.bundle\skybox-1\back.png" />
+    <BundleResource Include="Resources\AMap.bundle\skybox-1\right.png" />
+    <BundleResource Include="Resources\AMap.bundle\skybox-1\front.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\purplePin%403x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\arrow_line_outer.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\greenPin%403x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\offline_shouqi_2%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\particle_fog.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\lineTexture.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\greenPin_lift%403x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\greenPin_lift%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\offline_shouqi%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\offline_zhankai%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\particle_rain.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\calloutArrowMask.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\traffic_texture_red.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\calloutArrowMask%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\greenPin%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\particle_sun_1.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\particle_sun_0.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\purplePin%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\offline_sousuo%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\select_.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\pin_shadow.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\offline_clear%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\arrow_line_inner.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\greenPin.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\offline_down%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\arrow_line_3d_shadow.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\purplePin_lift.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\redPin_lift%403x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\redPin_lift.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\particle_haze.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\terrainDefault.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\lineDashTexture.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\traffic_texture_blue.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\traffic_texture_green.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\traffic_texture_yellow.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\marker_blue%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\arrow_line_3d_outer.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\purplePin.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\redPin_lift%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\particle_snow.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\traffic_texture_darkred.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\select_%403x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\lineDashTextureDot.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\pin_shadow%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\redPin%403x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\purplePin_lift%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\purplePin_lift%403x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\lineTextureThin.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\redPin%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\offline_zhankai_2%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\pin_shadow%403x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\traffic_texture_gray.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\arrow_line_3d_inner.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\redPin.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\select_%402x.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\marker_blue.png" />
+    <BundleResource Include="Resources\AMap.bundle\images\greenPin_lift.png" />
+    <BundleResource Include="Resources\AMap.bundle\offline\offlinePackage.plist" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_1_18_1627443174.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\3d_navi_sky_day.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_26_18_1624864866.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\dash.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_35_18_1641374969.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\anscii_0.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_3_18_1624864847.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_6_18_1624866734.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_40_18_1629979483.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\bktile_n.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\tmc3d_allinone.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\bktile.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\mapprofile_1_18_1626748603.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_1_18_1620803672.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_4_18_1630315891.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_2_18_1620803665.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\3dportrait.xml" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\3dlandscape.xml" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\tmc3d_n_allinone.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\dash_cd.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_50_18_1639057433.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_38_18_1630469232.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_9_18_1609147790.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_0_18_1641525834.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\search_scenic_icon.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\tmc_blind_allinone.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\3d_sky_day.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_3_18_1620803657.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_25_18_1624864857.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_10_18_1620803632.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_28_18_1621223375.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\arrow_topface.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_18_18_1624864928.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\waterline.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\tmc_n_allinone.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_25_18_1616413163.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_17_18_1605511247.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\tmc_allinone.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_29_18_1637641334.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_16_18_1605511194.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_8_18_1624864902.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\styleiconslist.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\3d_sky_night.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\lineround.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_5_18_1616413149.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\laneprofile_1_18_1640573575.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\config_2_18_1605512060.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_39_18_1630469193.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\tmc3d_blind_allinone.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_4_18_1624863920.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\config_1_18_1623401831.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_50_18_1621241047.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_41_18_1623986571.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\anscii.fnt" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_19_18_1605511205.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_11_18_1611742683.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_24_18_1619768490.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\tmc_l_allinone.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_40_18_1624871103.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\dash_tq.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\mapprofile_2_18_1620443466.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_100_18_1640182887.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_37_18_1612505452.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_5_18_1630315937.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_1_17_for_terrain.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\tmc3d_l_allinone.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\style_36_18_1641374988.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\icons_6_18_1624863929.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\grass_night.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_sky_night.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\icons_42_18_1615218949.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\d_yellow_night.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\crossing_nigth_bk.data" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_bk_grass_day.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\road_bottom_day.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1016_1.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1016_2.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\d_yellow_day.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\exit_label_bk_secondary_day.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\grass_day.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1015_1.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_bk_grass_night.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\roadbk_main_day.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1015_2.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\exit_label_bk_main_day.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_sky_day.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\road_bottom_night.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\roadbk_main_night.png" />
+    <BundleResource Include="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\crossing_day_bk.data" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\GNaviConfig.xml">
+      <Link>Resources\AMap.bundle\GNaviConfig.xml</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\res.zip">
+      <Link>Resources\AMap.bundle\res.zip</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\terrainStyle.data">
+      <Link>Resources\AMap.bundle\terrainStyle.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\res.ck">
+      <Link>Resources\AMap.bundle\res.ck</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\skybox-1\bottom.png">
+      <Link>Resources\AMap.bundle\skybox-1\bottom.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\skybox-1\left.png">
+      <Link>Resources\AMap.bundle\skybox-1\left.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\skybox-1\top.png">
+      <Link>Resources\AMap.bundle\skybox-1\top.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\skybox-1\back.png">
+      <Link>Resources\AMap.bundle\skybox-1\back.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\skybox-1\right.png">
+      <Link>Resources\AMap.bundle\skybox-1\right.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\skybox-1\front.png">
+      <Link>Resources\AMap.bundle\skybox-1\front.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\purplePin%403x.png">
+      <Link>Resources\AMap.bundle\images\purplePin%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\arrow_line_outer.png">
+      <Link>Resources\AMap.bundle\images\arrow_line_outer.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\greenPin%403x.png">
+      <Link>Resources\AMap.bundle\images\greenPin%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\offline_shouqi_2%402x.png">
+      <Link>Resources\AMap.bundle\images\offline_shouqi_2%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\particle_fog.png">
+      <Link>Resources\AMap.bundle\images\particle_fog.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\lineTexture.png">
+      <Link>Resources\AMap.bundle\images\lineTexture.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\greenPin_lift%403x.png">
+      <Link>Resources\AMap.bundle\images\greenPin_lift%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\greenPin_lift%402x.png">
+      <Link>Resources\AMap.bundle\images\greenPin_lift%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\offline_shouqi%402x.png">
+      <Link>Resources\AMap.bundle\images\offline_shouqi%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\offline_zhankai%402x.png">
+      <Link>Resources\AMap.bundle\images\offline_zhankai%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\particle_rain.png">
+      <Link>Resources\AMap.bundle\images\particle_rain.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\calloutArrowMask.png">
+      <Link>Resources\AMap.bundle\images\calloutArrowMask.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\traffic_texture_red.png">
+      <Link>Resources\AMap.bundle\images\traffic_texture_red.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\calloutArrowMask%402x.png">
+      <Link>Resources\AMap.bundle\images\calloutArrowMask%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\greenPin%402x.png">
+      <Link>Resources\AMap.bundle\images\greenPin%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\particle_sun_1.png">
+      <Link>Resources\AMap.bundle\images\particle_sun_1.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\particle_sun_0.png">
+      <Link>Resources\AMap.bundle\images\particle_sun_0.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\purplePin%402x.png">
+      <Link>Resources\AMap.bundle\images\purplePin%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\offline_sousuo%402x.png">
+      <Link>Resources\AMap.bundle\images\offline_sousuo%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\select_.png">
+      <Link>Resources\AMap.bundle\images\select_.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\pin_shadow.png">
+      <Link>Resources\AMap.bundle\images\pin_shadow.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\offline_clear%402x.png">
+      <Link>Resources\AMap.bundle\images\offline_clear%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\arrow_line_inner.png">
+      <Link>Resources\AMap.bundle\images\arrow_line_inner.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\greenPin.png">
+      <Link>Resources\AMap.bundle\images\greenPin.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\offline_down%402x.png">
+      <Link>Resources\AMap.bundle\images\offline_down%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\arrow_line_3d_shadow.png">
+      <Link>Resources\AMap.bundle\images\arrow_line_3d_shadow.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\purplePin_lift.png">
+      <Link>Resources\AMap.bundle\images\purplePin_lift.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\redPin_lift%403x.png">
+      <Link>Resources\AMap.bundle\images\redPin_lift%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\redPin_lift.png">
+      <Link>Resources\AMap.bundle\images\redPin_lift.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\particle_haze.png">
+      <Link>Resources\AMap.bundle\images\particle_haze.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\terrainDefault.png">
+      <Link>Resources\AMap.bundle\images\terrainDefault.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\lineDashTexture.png">
+      <Link>Resources\AMap.bundle\images\lineDashTexture.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\traffic_texture_blue.png">
+      <Link>Resources\AMap.bundle\images\traffic_texture_blue.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\traffic_texture_green.png">
+      <Link>Resources\AMap.bundle\images\traffic_texture_green.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\traffic_texture_yellow.png">
+      <Link>Resources\AMap.bundle\images\traffic_texture_yellow.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\marker_blue%402x.png">
+      <Link>Resources\AMap.bundle\images\marker_blue%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\arrow_line_3d_outer.png">
+      <Link>Resources\AMap.bundle\images\arrow_line_3d_outer.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\purplePin.png">
+      <Link>Resources\AMap.bundle\images\purplePin.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\redPin_lift%402x.png">
+      <Link>Resources\AMap.bundle\images\redPin_lift%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\particle_snow.png">
+      <Link>Resources\AMap.bundle\images\particle_snow.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\traffic_texture_darkred.png">
+      <Link>Resources\AMap.bundle\images\traffic_texture_darkred.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\select_%403x.png">
+      <Link>Resources\AMap.bundle\images\select_%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\lineDashTextureDot.png">
+      <Link>Resources\AMap.bundle\images\lineDashTextureDot.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\pin_shadow%402x.png">
+      <Link>Resources\AMap.bundle\images\pin_shadow%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\redPin%403x.png">
+      <Link>Resources\AMap.bundle\images\redPin%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\purplePin_lift%402x.png">
+      <Link>Resources\AMap.bundle\images\purplePin_lift%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\purplePin_lift%403x.png">
+      <Link>Resources\AMap.bundle\images\purplePin_lift%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\lineTextureThin.png">
+      <Link>Resources\AMap.bundle\images\lineTextureThin.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\redPin%402x.png">
+      <Link>Resources\AMap.bundle\images\redPin%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\offline_zhankai_2%402x.png">
+      <Link>Resources\AMap.bundle\images\offline_zhankai_2%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\pin_shadow%403x.png">
+      <Link>Resources\AMap.bundle\images\pin_shadow%403x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\traffic_texture_gray.png">
+      <Link>Resources\AMap.bundle\images\traffic_texture_gray.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\arrow_line_3d_inner.png">
+      <Link>Resources\AMap.bundle\images\arrow_line_3d_inner.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\redPin.png">
+      <Link>Resources\AMap.bundle\images\redPin.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\select_%402x.png">
+      <Link>Resources\AMap.bundle\images\select_%402x.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\marker_blue.png">
+      <Link>Resources\AMap.bundle\images\marker_blue.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\images\greenPin_lift.png">
+      <Link>Resources\AMap.bundle\images\greenPin_lift.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\offline\offlinePackage.plist">
+      <Link>Resources\AMap.bundle\offline\offlinePackage.plist</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_1_18_1627443174.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_1_18_1627443174.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\3d_navi_sky_day.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\3d_navi_sky_day.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_26_18_1624864866.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_26_18_1624864866.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\dash.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\dash.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_35_18_1641374969.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_35_18_1641374969.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\anscii_0.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\anscii_0.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_3_18_1624864847.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_3_18_1624864847.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_6_18_1624866734.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_6_18_1624866734.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_40_18_1629979483.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_40_18_1629979483.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\bktile_n.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\bktile_n.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\tmc3d_allinone.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\tmc3d_allinone.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\bktile.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\bktile.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\mapprofile_1_18_1626748603.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\mapprofile_1_18_1626748603.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_1_18_1620803672.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_1_18_1620803672.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_4_18_1630315891.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_4_18_1630315891.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_2_18_1620803665.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_2_18_1620803665.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\3dportrait.xml">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\3dportrait.xml</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\3dlandscape.xml">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\3dlandscape.xml</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\tmc3d_n_allinone.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\tmc3d_n_allinone.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\dash_cd.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\dash_cd.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_50_18_1639057433.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_50_18_1639057433.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_38_18_1630469232.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_38_18_1630469232.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_9_18_1609147790.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_9_18_1609147790.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_0_18_1641525834.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_0_18_1641525834.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\search_scenic_icon.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\search_scenic_icon.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\tmc_blind_allinone.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\tmc_blind_allinone.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\3d_sky_day.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\3d_sky_day.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_3_18_1620803657.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_3_18_1620803657.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_25_18_1624864857.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_25_18_1624864857.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_10_18_1620803632.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_10_18_1620803632.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_28_18_1621223375.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_28_18_1621223375.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\arrow_topface.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\arrow_topface.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_18_18_1624864928.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_18_18_1624864928.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\waterline.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\waterline.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\tmc_n_allinone.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\tmc_n_allinone.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_25_18_1616413163.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_25_18_1616413163.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_17_18_1605511247.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_17_18_1605511247.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\tmc_allinone.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\tmc_allinone.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_29_18_1637641334.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_29_18_1637641334.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_16_18_1605511194.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_16_18_1605511194.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_8_18_1624864902.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_8_18_1624864902.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\styleiconslist.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\styleiconslist.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\3d_sky_night.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\3d_sky_night.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\lineround.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\lineround.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_5_18_1616413149.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_5_18_1616413149.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\laneprofile_1_18_1640573575.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\laneprofile_1_18_1640573575.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\config_2_18_1605512060.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\config_2_18_1605512060.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_39_18_1630469193.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_39_18_1630469193.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\tmc3d_blind_allinone.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\tmc3d_blind_allinone.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_4_18_1624863920.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_4_18_1624863920.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\config_1_18_1623401831.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\config_1_18_1623401831.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_50_18_1621241047.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_50_18_1621241047.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_41_18_1623986571.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_41_18_1623986571.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\anscii.fnt">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\anscii.fnt</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_19_18_1605511205.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_19_18_1605511205.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_11_18_1611742683.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_11_18_1611742683.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_24_18_1619768490.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_24_18_1619768490.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\tmc_l_allinone.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\tmc_l_allinone.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_40_18_1624871103.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_40_18_1624871103.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\dash_tq.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\dash_tq.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\mapprofile_2_18_1620443466.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\mapprofile_2_18_1620443466.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_100_18_1640182887.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_100_18_1640182887.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_37_18_1612505452.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_37_18_1612505452.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_5_18_1630315937.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_5_18_1630315937.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_1_17_for_terrain.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_1_17_for_terrain.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\tmc3d_l_allinone.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\tmc3d_l_allinone.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\style_36_18_1641374988.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\style_36_18_1641374988.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\icons_6_18_1624863929.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\icons_6_18_1624863929.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\grass_night.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\grass_night.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_sky_night.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_sky_night.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\icons_42_18_1615218949.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\icons_42_18_1615218949.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\d_yellow_night.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\d_yellow_night.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\crossing_nigth_bk.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\crossing_nigth_bk.data</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_bk_grass_day.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_bk_grass_day.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\road_bottom_day.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\road_bottom_day.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1016_1.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1016_1.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1016_2.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1016_2.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\d_yellow_day.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\d_yellow_day.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\exit_label_bk_secondary_day.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\exit_label_bk_secondary_day.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\grass_day.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\grass_day.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1015_1.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1015_1.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_bk_grass_night.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_bk_grass_night.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\roadbk_main_day.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\roadbk_main_day.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1015_2.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\1015_2.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\exit_label_bk_main_day.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\exit_label_bk_main_day.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_sky_day.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\cross_sky_day.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\road_bottom_night.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\road_bottom_night.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\roadbk_main_night.png">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\roadbk_main_night.png</Link>
+    </BundleResource>
+    <BundleResource Condition="'$(_ResourcePrefix)' != ''" Update="Resources\AMap.bundle\AMap3D.bundle\VM3DRes\crossing_day_bk.data">
+      <Link>Resources\AMap.bundle\AMap3D.bundle\VM3DRes\crossing_day_bk.data</Link>
+    </BundleResource>
+  </ItemGroup>
+</Project>

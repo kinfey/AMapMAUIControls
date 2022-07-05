@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{F3824A53-36C8-4601-BEAE-6A68772DB687}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="AMap.iOS/AppDelegate.cs">
+    <Files>
+      <File FileName="iOS.AMap.3D/obj/Debug/net6.0-ios/iOS/iOS.AMap._3D/MAOverlayRenderer.g.cs" Line="314" Column="25" />
+      <File FileName="iOS.AMap.3D/ApiDefinitions.cs" Line="1045" Column="13" />
+      <File FileName="AMap.iOS/AppDelegate.cs" Line="21" Column="36" />
+      <File FileName="iOS.AMap.Foundation/ApiDefinitions.cs" Line="21" Column="39" />
+      <File FileName="iOS.AMap.Foundation/StructsAndEnums.cs" Line="6" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AMap.iOS.Demo" expanded="True">
+            <Node name="AMap.iOS" expanded="True" selected="True" />
+            <Node name="iOS.AMap.3D" expanded="True" />
+            <Node name="iOS.AMap.Foundation" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.AMap.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008101-000B18CE2178001E" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008101-000B18CE2178001E" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
